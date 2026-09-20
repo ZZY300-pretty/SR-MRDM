@@ -1,0 +1,189 @@
+model:
+  base_learning_rate: 1.0e-4
+  target: sgm.models.diffusion.ResidualDiffusionEngine
+  params:
+    input_key: "label"
+    mean_key: "cond_image"
+    compile_model: False
+    use_ema: True
+    use_flash_attn2: False
+    image_metrics: "evaluator"
+
+    sigma_st_config:
+      target: sgm.modules.diffusionmodules.sigma2st.EDMSigma2St
+      params:
+        alpha: 3.0
+
+    denoiser_config:
+      target: sgm.modules.diffusionmodules.denoiser.ResidualDenoiser
+      params:
+        scaling_config:
+          target: sgm.modules.diffusionmodules.denoiser_scaling.ResidualEDMScaling
+          params:
+            sigma_input: 1.0
+            sigma_mu: 1.0
+
+    network_wrapper: "sgm.modules.diffusionmodules.wrappers.CloudRemovalWrapper"
+
+    # 原版 EMRDM 的网络架构配置（不带任何其他多模态/先验信息）
+    network_config:
+      target: sgm.modules.diffusionmodules.k_diffusion.image_transformer.ImageTransformerDenoiserModelInterface
+      params:
+        in_channels: 6
+        out_channels: 3
+        patch_size: [4, 4]
+        widths: [64, 128, 256, 512]
+        depths: [2, 2, 2, 2]
+        d_ffs: [128, 256, 512, 1024]
+        self_attns: [
+          {"type": "neighborhood", "d_head": 64, "kernel_size": 7},
+          {"type": "neighborhood", "d_head": 64, "kernel_size": 7},
+          {"type": "global", "d_head": 64},
+          {"type": "global", "d_head": 64},
+        ]
+        dropout_rate: [0.0, 0.0, 0.0, 0.1]
+        mapping_depth: 2
+        mapping_width: 512
+        mapping_d_ff: 1024
+        mapping_dropout_rate: 0.1
+
+    conditioner_config:
+      target: sgm.modules.GeneralConditioner
+      params:
+        emb_models:
+          - is_trainable: True
+            input_key: "cond_image"
+            ucg_rate: 0.0
+            target: sgm.modules.encoders.modules.IndentityEmbedder
+
+    first_stage_config:
+      target: sgm.models.autoencoder.IdentityFirstStage
+
+    # ==============================================================
+    # 🔴 核心区别：原版基础 EMRDM 损失函数，完全关闭特征匹配机制
+    # ==============================================================
+    loss_fn_config:
+      target: sgm.modules.diffusionmodules.importance_loss.SemanticFeatureMatchingResidualDiffusionLoss
+      params:
+        mask_key: "M"
+        importance_weight: 4.0
+        background_weight: 1.0
+        mask_power: 1.0
+        normalize_importance: True
+        feature_matching_weight: 0.0  # 🔥 彻底设为 0.0！不使用任何下游目标检测的先验监督
+        feature_matching_config:
+          target: sgm.modules.diffusionmodules.semantic_feature_matching.SemanticFeatureMatchingLoss
+          params:
+            layers: ["relu2_2", "relu3_3", "relu4_3"]
+            layer_weights: [0.25, 0.45, 0.30]
+            feature_distance: "l1"
+            mask_mode: "none"  # 🔥 消融为无掩码匹配
+            semantic_mask_key: "semantic_mask"
+            cloud_mask_key: "M"
+            missing_semantic_fallback: "ones"
+            missing_cloud_fallback: "ones"
+            outside_mask_weight: 0.10
+            normalize_by_mask_area: True
+            pretrained_backbone: True
+            use_input_scaling: True
+            normalize_features: True
+        loss_weighting_config:
+          target: sgm.modules.diffusionmodules.loss_weighting.ResidualEDMWeighting
+          params:
+            sigma_input: 1.0
+            sigma_mu: 1.0
+        sigma_sampler_config:
+          target: sgm.modules.diffusionmodules.sigma_sampling.EDMSampling
+          params:
+            p_mean: -1.4
+            p_std: 1.4
+
+    sampler_config:
+      target: sgm.modules.diffusionmodules.sampling.ResidualEulerEDMSampler
+      params:
+        num_steps: 4
+        discretization_config:
+          target: sgm.modules.diffusionmodules.discretizer.EDMDiscretization
+          params:
+            sigma_min: 0.001
+            sigma_max: 100.0
+
+    to_rgb_config:
+      target: sgm.util.identity_to_rgb
+
+data:
+  target: sgm.data.base.DataModuleFromConfig
+  params:
+    batch_size: 1
+    num_workers: 8
+    wrap: True
+    train:
+      target: sgm.data.patches.cloud_patch_dataset.CloudRemovalPatchDataset
+      params:
+        dataset_root: "datasets/archive_random_10pct_experiment_crops_heavy_cloud"
+        split: "train"
+        require_mask: True
+        return_semantic_mask: False  # Baseline 测试集不强求返回语义掩码
+
+    validation:
+      target: sgm.data.patches.cloud_patch_dataset.CloudRemovalPatchDataset
+      params:
+        dataset_root: "datasets/archive_random_10pct_experiment_crops_heavy_cloud"
+        split: "val"
+        require_mask: True
+        return_semantic_mask: False
+
+    test:
+      target: sgm.data.patches.cloud_patch_dataset.CloudRemovalPatchDataset
+      params:
+        dataset_root: "datasets/archive_random_10pct_experiment_crops_heavy_cloud"
+        split: "test"
+        require_mask: True
+        return_semantic_mask: False
+
+    predict:
+      target: sgm.data.patches.cloud_patch_dataset.CloudRemovalPatchDataset
+      params:
+        dataset_root: "datasets/archive_random_10pct_experiment_crops_heavy_cloud"
+        split: "test"
+        require_mask: True
+        return_semantic_mask: False
+
+lightning:
+  modelcheckpoint:
+    params:
+      every_n_train_steps: 1000
+      monitor: "RMSE"
+
+  callbacks:
+    metrics_over_trainsteps_checkpoint:
+      params:
+        every_n_train_steps: 5000
+
+    image_logger:
+      target: main.ImageLogger
+      params:
+        disabled: False
+        batch_frequency: 2000
+        max_images: 4
+        increase_log_steps: False
+        log_first_step: False
+        log_images_kwargs:
+          use_ema_scope: False
+          N: 4
+          n_rows: 2
+          return_intermediate: False
+          return_denoised: False
+          return_add_mu: False
+          return_add_noise: False
+          return_cond: True
+
+  trainer:
+    devices: "0,"
+    precision: "16-mixed"
+    num_sanity_val_steps: 0
+    benchmark: True
+    accumulate_grad_batches: 8
+    check_val_every_n_epoch: 1
+    max_epochs: 200
+    log_every_n_steps: 20

@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1500" viewBox="0 0 2400 1500">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#224d73"/>
+  </marker>
+</defs>
+
+<rect width="2400" height="1500" fill="#f6f2ea"/>
+<rect x="40" y="28" width="2320" height="120" rx="28" ry="28" fill="#183b5b" stroke="#183b5b" stroke-width="1"/>
+<text x="70" y="86" font-size="44" font-family="Arial, Segoe UI, sans-serif" fill="#ffffff" font-weight="700">EMRDM: Semantic-Routed Residual Diffusion for Cloud Removal</text>
+<text x="70" y="122" font-size="22" font-family="Arial, Segoe UI, sans-serif" fill="#d8e7f5" font-weight="500">Core restoration framework highlighting the proposed innovations</text>
+<rect x="40" y="180" width="2320" height="1260" rx="32" ry="32" fill="#fffdf9" stroke="#224d73" stroke-width="3"/>
+<text x="70" y="238" font-size="34" font-family="Arial, Segoe UI, sans-serif" fill="#224d73" font-weight="700">Main Method Figure</text>
+<rect x="90" y="300" width="320" height="970" rx="28" ry="28" fill="#eef8f2" stroke="#4f8668" stroke-width="3"/>
+<text x="120" y="350" font-size="28" font-family="Arial, Segoe UI, sans-serif" fill="#4f8668" font-weight="700">Input supervision and conditions</text>
+<rect x="120" y="390" width="260" height="110" rx="20" ry="20" fill="#ffffff" stroke="#4f8668" stroke-width="2"/>
+<text x="250.0" y="438.0" font-size="24" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Cloudy image</text>
+<text x="250.0" y="469.0" font-size="24" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">cond_image / mean input</text>
+<rect x="120" y="540" width="260" height="92" rx="20" ry="20" fill="#ffffff" stroke="#4f8668" stroke-width="2"/>
+<text x="250.0" y="579.0" font-size="24" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Cloud mask</text>
+<text x="250.0" y="610.0" font-size="24" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">M</text>
+<rect x="120" y="670" width="260" height="92" rx="20" ry="20" fill="#ffffff" stroke="#4f8668" stroke-width="2"/>
+<text x="250.0" y="709.0" font-size="24" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Semantic mask</text>
+<text x="250.0" y="740.0" font-size="24" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">semantic_mask</text>
+<rect x="120" y="800" width="260" height="110" rx="20" ry="20" fill="#ffffff" stroke="#4f8668" stroke-width="2"/>
+<text x="250.0" y="848.0" font-size="24" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Clear target</text>
+<text x="250.0" y="879.0" font-size="24" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">label / x0</text>
+<rect x="120" y="960" width="260" height="120" rx="20" ry="20" fill="#f8fff9" stroke="#4f8668" stroke-width="2"/>
+<text x="250.0" y="998.5" font-size="22" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Identity first stage</text>
+<text x="250.0" y="1027.5" font-size="22" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">No latent compression</text>
+<text x="250.0" y="1056.5" font-size="22" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">x0 and mu stay image-aligned</text>
+<polyline points="250,500 250,540" fill="none" stroke="#4f8668" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="250,632 250,670" fill="none" stroke="#4f8668" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="250,762 250,800" fill="none" stroke="#4f8668" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="250,910 250,960" fill="none" stroke="#4f8668" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="460" y="300" width="1320" height="740" rx="30" ry="30" fill="#eef4ff" stroke="#5b84c4" stroke-width="3"/>
+<text x="490" y="350" font-size="30" font-family="Arial, Segoe UI, sans-serif" fill="#5b84c4" font-weight="700">Training graph</text>
+<rect x="500" y="390" width="320" height="120" rx="20" ry="20" fill="#ffffff" stroke="#5b84c4" stroke-width="2"/>
+<text x="660.0" y="429.0" font-size="21" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Residual diffusion engine</text>
+<text x="660.0" y="457.0" font-size="21" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">x0 = label</text>
+<text x="660.0" y="485.0" font-size="21" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">mu = cond_image</text>
+<rect x="860" y="390" width="250" height="120" rx="20" ry="20" fill="#ffffff" stroke="#5b84c4" stroke-width="2"/>
+<text x="985.0" y="443.0" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">EDM sigma-to-state</text>
+<text x="985.0" y="470.0" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">st = 1 / (1 + alpha * sigma)</text>
+<rect x="1140" y="390" width="250" height="120" rx="20" ry="20" fill="#ffffff" stroke="#5b84c4" stroke-width="2"/>
+<text x="1265.0" y="429.5" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">General conditioner</text>
+<text x="1265.0" y="456.5" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Identity embedder</text>
+<text x="1265.0" y="483.5" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">for cond_image</text>
+<rect x="1420" y="390" width="320" height="120" rx="20" ry="20" fill="#ffffff" stroke="#5b84c4" stroke-width="2"/>
+<text x="1580.0" y="429.5" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Residual denoiser wrapper</text>
+<text x="1580.0" y="456.5" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">EDM scaling</text>
+<text x="1580.0" y="483.5" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">concat conditioning</text>
+<rect x="560" y="560" width="1080" height="360" rx="28" ry="28" fill="#ffffff" stroke="#224d73" stroke-width="3"/>
+<text x="586" y="602" font-size="30" font-family="Arial, Segoe UI, sans-serif" fill="#224d73" font-weight="700">Semantic-routed dual-branch denoiser</text>
+<rect x="610" y="630" width="250" height="120" rx="20" ry="20" fill="#eef8f2" stroke="#4f8668" stroke-width="2"/>
+<text x="735.0" y="668.5" font-size="22" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Route-mask fusion</text>
+<text x="735.0" y="697.5" font-size="22" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">semantic_mask U cloud mask</text>
+<text x="735.0" y="726.5" font-size="22" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">patch_size = 128</text>
+<rect x="900" y="630" width="220" height="120" rx="20" ry="20" fill="#f5f6f8" stroke="#6b7280" stroke-width="2"/>
+<text x="1010.0" y="668.5" font-size="22" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Patch scoring</text>
+<text x="1010.0" y="697.5" font-size="22" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">route_mode = max</text>
+<text x="1010.0" y="726.5" font-size="22" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">threshold = 0.005</text>
+<rect x="1160" y="620" width="210" height="150" rx="20" ry="20" fill="#fff3ea" stroke="#b96c34" stroke-width="2"/>
+<text x="1265.0" y="673.5" font-size="22" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Light branch</text>
+<text x="1265.0" y="702.5" font-size="22" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Lightweight</text>
+<text x="1265.0" y="731.5" font-size="22" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">background denoiser</text>
+<rect x="1400" y="620" width="210" height="150" rx="20" ry="20" fill="#f6efff" stroke="#8b62b8" stroke-width="2"/>
+<text x="1505.0" y="673.5" font-size="22" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Heavy branch</text>
+<text x="1505.0" y="702.5" font-size="22" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">ImageTransformer</text>
+<text x="1505.0" y="731.5" font-size="22" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">backbone</text>
+<rect x="1080" y="810" width="420" height="82" rx="20" ry="20" fill="#fbfcff" stroke="#224d73" stroke-width="2"/>
+<text x="1290.0" y="859.5" font-size="24" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Patch merge and image reconstruction</text>
+<polyline points="860,690 900,690" fill="none" stroke="#224d73" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1120,690 1160,690" fill="none" stroke="#224d73" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1120,690 1400,690" fill="none" stroke="#224d73" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1265,770 1265,810" fill="none" stroke="#224d73" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1505,770 1505,810 1500,810" fill="none" stroke="#224d73" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="1820" y="300" width="470" height="740" rx="30" ry="30" fill="#fff3ea" stroke="#b96c34" stroke-width="3"/>
+<text x="1850" y="350" font-size="30" font-family="Arial, Segoe UI, sans-serif" fill="#b96c34" font-weight="700">Optimization objectives</text>
+<rect x="1860" y="400" width="390" height="120" rx="20" ry="20" fill="#ffffff" stroke="#b96c34" stroke-width="2"/>
+<text x="2055.0" y="439.5" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Cloud-aware importance loss</text>
+<text x="2055.0" y="466.5" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Higher weights on cloud-covered</text>
+<text x="2055.0" y="493.5" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">foreground pixels</text>
+<rect x="1860" y="560" width="390" height="140" rx="20" ry="20" fill="#ffffff" stroke="#b96c34" stroke-width="2"/>
+<text x="2055.0" y="598.0" font-size="18" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Asymmetric semantic feature matching</text>
+<text x="2055.0" y="623.0" font-size="18" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">VGG relu2_2 / relu3_3 / relu4_3</text>
+<text x="2055.0" y="648.0" font-size="18" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Foreground and background</text>
+<text x="2055.0" y="673.0" font-size="18" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">use different weights</text>
+<rect x="1860" y="735" width="390" height="105" rx="20" ry="20" fill="#ffffff" stroke="#b96c34" stroke-width="2"/>
+<text x="2055.0" y="780.5" font-size="22" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Residual EDM weighting</text>
+<text x="2055.0" y="809.5" font-size="22" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Sigma-aware loss scaling during training</text>
+<rect x="1860" y="885" width="390" height="100" rx="20" ry="20" fill="#fffaf5" stroke="#b96c34" stroke-width="2"/>
+<text x="2055.0" y="914.5" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Total loss</text>
+<text x="2055.0" y="941.5" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">pixel reconstruction + 0.10 *</text>
+<text x="2055.0" y="968.5" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">feature matching</text>
+<rect x="460" y="1090" width="1830" height="250" rx="30" ry="30" fill="#f7fbf8" stroke="#4f8668" stroke-width="3"/>
+<text x="490" y="1140" font-size="30" font-family="Arial, Segoe UI, sans-serif" fill="#4f8668" font-weight="700">Inference and restoration</text>
+<rect x="520" y="1185" width="310" height="105" rx="20" ry="20" fill="#ffffff" stroke="#4f8668" stroke-width="2"/>
+<text x="675.0" y="1230.5" font-size="22" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Residual Heun EDM sampler</text>
+<text x="675.0" y="1259.5" font-size="22" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Iterative reverse diffusion</text>
+<rect x="880" y="1185" width="340" height="105" rx="20" ry="20" fill="#ffffff" stroke="#4f8668" stroke-width="2"/>
+<text x="1050.0" y="1218.0" font-size="18" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Reuse the same semantic-routed denoiser</text>
+<text x="1050.0" y="1243.0" font-size="18" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">semantic_mask, semantic_mask_available</text>
+<text x="1050.0" y="1268.0" font-size="18" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">and M are forwarded</text>
+<rect x="1270" y="1185" width="250" height="105" rx="20" ry="20" fill="#ffffff" stroke="#4f8668" stroke-width="2"/>
+<text x="1395.0" y="1230.5" font-size="22" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">EMA restoration output</text>
+<text x="1395.0" y="1259.5" font-size="22" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">restored image</text>
+<rect x="1570" y="1185" width="430" height="105" rx="20" ry="20" fill="#ffffff" stroke="#4f8668" stroke-width="2"/>
+<text x="1785.0" y="1217.0" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Output can be used for</text>
+<text x="1785.0" y="1244.0" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">visual quality assessment</text>
+<text x="1785.0" y="1271.0" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">or downstream sensing tasks</text>
+<rect x="580" y="252" width="240" height="42" rx="18" ry="18" fill="#eef8f2" stroke="#4f8668" stroke-width="2"/>
+<text x="700.0" y="279.5" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">I1  Route-mask fusion</text>
+<rect x="850" y="252" width="240" height="42" rx="18" ry="18" fill="#eef4ff" stroke="#5b84c4" stroke-width="2"/>
+<text x="970.0" y="279.5" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">I2  Dual-branch routing</text>
+<rect x="1120" y="252" width="240" height="42" rx="18" ry="18" fill="#fff3ea" stroke="#b96c34" stroke-width="2"/>
+<text x="1240.0" y="279.5" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">I3  Cloud-aware weighting</text>
+<rect x="1390" y="252" width="240" height="42" rx="18" ry="18" fill="#f6efff" stroke="#8b62b8" stroke-width="2"/>
+<text x="1510.0" y="279.5" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">I4  Semantic FM loss</text>
+<polyline points="380,445 500,445" fill="none" stroke="#224d73" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="820,445 860,445" fill="none" stroke="#224d73" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1110,445 1140,445" fill="none" stroke="#224d73" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1390,445 1420,445" fill="none" stroke="#224d73" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1580,500 1580,560" fill="none" stroke="#224d73" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1740,445 1740,690 1640,690" fill="none" stroke="#224d73" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="380,720 560,720" fill="none" stroke="#4f8668" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="380,855 500,855 500,445" fill="none" stroke="#4f8668" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1640,740 1820,740 1820,460 1860,460" fill="none" stroke="#224d73" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1500,852 1820,852 1820,625 1860,625" fill="none" stroke="#224d73" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="2100,690 2100,735" fill="none" stroke="#b96c34" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="2100,840 2100,885" fill="none" stroke="#b96c34" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="830,1232 890,1232" fill="none" stroke="#4f8668" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1210,1232 1270,1232" fill="none" stroke="#4f8668" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1520,1232 1570,1232" fill="none" stroke="#4f8668" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="90" y="1400" font-size="22" font-family="Arial, Segoe UI, sans-serif" fill="#5f6b7a" font-weight="500">Core figure recommendation: keep MMRotate outside this panel and present downstream detection as a separate application figure.</text>
+</svg>

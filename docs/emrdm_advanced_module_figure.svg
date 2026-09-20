@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1400" viewBox="0 0 2400 1400">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f7f2e9"/><stop offset="52%" stop-color="#eef5fb"/><stop offset="100%" stop-color="#f8fbf7"/></linearGradient>
+<marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#24527a"/></marker>
+</defs>
+<rect width="2400" height="1400" fill="url(#bg)"/>
+<rect x="36" y="24" width="2328" height="118" rx="30" ry="30" fill="#24527a" stroke="#24527a" stroke-width="1"/>
+<text x="62" y="78" font-size="46" fill="#ffffff" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">EMRDM Advanced Module Figure</text>
+<text x="62" y="118" font-size="22" fill="#d9e7f4" font-family="Arial, Segoe UI, sans-serif" font-weight="500" text-anchor="start">Semantic-routed residual diffusion with explicit innovation modules</text>
+<rect x="36" y="174" width="2328" height="1188" rx="34" ry="34" fill="#ffffff" stroke="#24527a" stroke-width="3"/>
+<text x="62" y="232" font-size="34" fill="#24527a" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">Publication-style architecture with visual modules</text>
+<text x="62" y="268" font-size="20" fill="#5f7082" font-family="Arial, Segoe UI, sans-serif" font-weight="500" text-anchor="start">Only the proposed restoration framework is shown; external detectors should be presented separately.</text>
+<rect x="70" y="330" width="250" height="230" rx="22" ry="22" fill="#ffffff" stroke="#3d8a69" stroke-width="2"/>
+<text x="88" y="366" font-size="24" fill="#16324a" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">Cloudy input</text>
+<rect x="88" y="386" width="214" height="156" rx="18" ry="18" fill="#e5edf5" stroke="#9cb3c6" stroke-width="1"/>
+<defs><linearGradient id="g_cloudy" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#78a7cc"/><stop offset="100%" stop-color="#49759a"/></linearGradient></defs>
+<rect x="96" y="394" width="198" height="140" rx="14" ry="14" fill="url(#g_cloudy)" stroke="#6d8daa" stroke-width="0"/>
+<path d="M 130.0,471.04999999999995 C 116.0,471.04999999999995 112.0,462.176 112.0,456.95599999999996 C 112.0,449.64799999999997 126.0,444.95 142.0,444.95 C 146.0,435.554 166.0,431.9 186.0,436.07599999999996 C 194.0,430.856 216.0,437.12 216.0,446.51599999999996 C 226.0,447.56 220.0,453.82399999999996 220.0,462.176 C 220.0,468.44 210.0,472.616 198.0,472.616 Z" fill="#ffffff" stroke="#b8c8d8" stroke-width="2"/>
+<path d="M 229.0,441.15 C 215.0,441.15 211.0,434.248 211.0,430.188 C 211.0,424.50399999999996 225.0,420.84999999999997 241.0,420.84999999999997 C 245.0,413.542 265.0,410.7 285.0,413.948 C 293.0,409.888 315.0,414.76 315.0,422.068 C 325.0,422.88 295.0,427.752 295.0,434.248 C 295.0,439.12 285.0,442.368 273.0,442.368 Z" fill="#ffffff" stroke="#b8c8d8" stroke-width="2"/>
+<path d="M 186.0,492.5 C 172.0,492.5 168.0,482.64 168.0,476.84 C 168.0,468.72 182.0,463.5 198.0,463.5 C 202.0,453.06 222.0,449.0 242.0,453.64 C 250.0,447.84 272.0,454.8 272.0,465.24 C 282.0,466.4 288.0,473.36 288.0,482.64 C 288.0,489.6 278.0,494.24 266.0,494.24 Z" fill="#ffffff" stroke="#b8c8d8" stroke-width="2"/>
+<rect x="70" y="596" width="250" height="230" rx="22" ry="22" fill="#ffffff" stroke="#3d8a69" stroke-width="2"/>
+<text x="88" y="632" font-size="24" fill="#16324a" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">Semantic prior</text>
+<rect x="88" y="652" width="214" height="156" rx="18" ry="18" fill="#e5edf5" stroke="#9cb3c6" stroke-width="1"/>
+<rect x="98" y="662" width="26" height="26" rx="6" ry="6" fill="#4c8b74" stroke="#4c8b74" stroke-width="0"/>
+<rect x="126" y="662" width="26" height="26" rx="6" ry="6" fill="#7ab892" stroke="#7ab892" stroke-width="0"/>
+<rect x="154" y="662" width="26" height="26" rx="6" ry="6" fill="#d7a55f" stroke="#d7a55f" stroke-width="0"/>
+<rect x="182" y="662" width="26" height="26" rx="6" ry="6" fill="#7b9ac8" stroke="#7b9ac8" stroke-width="0"/>
+<rect x="210" y="662" width="26" height="26" rx="6" ry="6" fill="#e5d0ad" stroke="#e5d0ad" stroke-width="0"/>
+<rect x="238" y="662" width="26" height="26" rx="6" ry="6" fill="#4c8b74" stroke="#4c8b74" stroke-width="0"/>
+<rect x="266" y="662" width="26" height="26" rx="6" ry="6" fill="#7ab892" stroke="#7ab892" stroke-width="0"/>
+<rect x="98" y="690" width="26" height="26" rx="6" ry="6" fill="#d7a55f" stroke="#d7a55f" stroke-width="0"/>
+<rect x="126" y="690" width="26" height="26" rx="6" ry="6" fill="#7b9ac8" stroke="#7b9ac8" stroke-width="0"/>
+<rect x="154" y="690" width="26" height="26" rx="6" ry="6" fill="#e5d0ad" stroke="#e5d0ad" stroke-width="0"/>
+<rect x="182" y="690" width="26" height="26" rx="6" ry="6" fill="#4c8b74" stroke="#4c8b74" stroke-width="0"/>
+<rect x="210" y="690" width="26" height="26" rx="6" ry="6" fill="#7ab892" stroke="#7ab892" stroke-width="0"/>
+<rect x="238" y="690" width="26" height="26" rx="6" ry="6" fill="#d7a55f" stroke="#d7a55f" stroke-width="0"/>
+<rect x="266" y="690" width="26" height="26" rx="6" ry="6" fill="#7b9ac8" stroke="#7b9ac8" stroke-width="0"/>
+<rect x="98" y="718" width="26" height="26" rx="6" ry="6" fill="#e5d0ad" stroke="#e5d0ad" stroke-width="0"/>
+<rect x="126" y="718" width="26" height="26" rx="6" ry="6" fill="#4c8b74" stroke="#4c8b74" stroke-width="0"/>
+<rect x="154" y="718" width="26" height="26" rx="6" ry="6" fill="#7ab892" stroke="#7ab892" stroke-width="0"/>
+<rect x="182" y="718" width="26" height="26" rx="6" ry="6" fill="#d7a55f" stroke="#d7a55f" stroke-width="0"/>
+<rect x="210" y="718" width="26" height="26" rx="6" ry="6" fill="#7b9ac8" stroke="#7b9ac8" stroke-width="0"/>
+<rect x="238" y="718" width="26" height="26" rx="6" ry="6" fill="#e5d0ad" stroke="#e5d0ad" stroke-width="0"/>
+<rect x="266" y="718" width="26" height="26" rx="6" ry="6" fill="#4c8b74" stroke="#4c8b74" stroke-width="0"/>
+<rect x="98" y="746" width="26" height="26" rx="6" ry="6" fill="#7ab892" stroke="#7ab892" stroke-width="0"/>
+<rect x="126" y="746" width="26" height="26" rx="6" ry="6" fill="#d7a55f" stroke="#d7a55f" stroke-width="0"/>
+<rect x="154" y="746" width="26" height="26" rx="6" ry="6" fill="#7b9ac8" stroke="#7b9ac8" stroke-width="0"/>
+<rect x="182" y="746" width="26" height="26" rx="6" ry="6" fill="#e5d0ad" stroke="#e5d0ad" stroke-width="0"/>
+<rect x="210" y="746" width="26" height="26" rx="6" ry="6" fill="#4c8b74" stroke="#4c8b74" stroke-width="0"/>
+<rect x="238" y="746" width="26" height="26" rx="6" ry="6" fill="#7ab892" stroke="#7ab892" stroke-width="0"/>
+<rect x="266" y="746" width="26" height="26" rx="6" ry="6" fill="#d7a55f" stroke="#d7a55f" stroke-width="0"/>
+<rect x="98" y="774" width="26" height="26" rx="6" ry="6" fill="#7b9ac8" stroke="#7b9ac8" stroke-width="0"/>
+<rect x="126" y="774" width="26" height="26" rx="6" ry="6" fill="#e5d0ad" stroke="#e5d0ad" stroke-width="0"/>
+<rect x="154" y="774" width="26" height="26" rx="6" ry="6" fill="#4c8b74" stroke="#4c8b74" stroke-width="0"/>
+<rect x="182" y="774" width="26" height="26" rx="6" ry="6" fill="#7ab892" stroke="#7ab892" stroke-width="0"/>
+<rect x="210" y="774" width="26" height="26" rx="6" ry="6" fill="#d7a55f" stroke="#d7a55f" stroke-width="0"/>
+<rect x="238" y="774" width="26" height="26" rx="6" ry="6" fill="#7b9ac8" stroke="#7b9ac8" stroke-width="0"/>
+<rect x="266" y="774" width="26" height="26" rx="6" ry="6" fill="#e5d0ad" stroke="#e5d0ad" stroke-width="0"/>
+<rect x="70" y="862" width="250" height="230" rx="22" ry="22" fill="#ffffff" stroke="#3d8a69" stroke-width="2"/>
+<text x="88" y="898" font-size="24" fill="#16324a" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">Cloud prior</text>
+<rect x="88" y="918" width="214" height="156" rx="18" ry="18" fill="#e5edf5" stroke="#9cb3c6" stroke-width="1"/>
+<rect x="96" y="926" width="198" height="140" rx="14" ry="14" fill="#edf4ff" stroke="#9cb3c6" stroke-width="0"/>
+<circle cx="112" cy="940" r="18" fill="#d8e7f7"/>
+<circle cx="146" cy="958" r="18" fill="#d8e7f7"/>
+<circle cx="180" cy="940" r="18" fill="#d8e7f7"/>
+<circle cx="214" cy="958" r="18" fill="#d8e7f7"/>
+<circle cx="248" cy="940" r="18" fill="#d8e7f7"/>
+<path d="M 120,1004 C 152,962 204,1028 256,986 L 256,1050 L 120,1050 Z" fill="#4f8668" opacity="0.9"/>
+<polyline points="320,446 390,446 390,520" fill="none" stroke="#3d8a69" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="320,712 390,712 390,560" fill="none" stroke="#3d8a69" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="320,978 390,978 390,600" fill="none" stroke="#3d8a69" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="360" y="320" width="1270" height="760" rx="30" ry="30" fill="#edf4ff" stroke="#24527a" stroke-width="3"/>
+<text x="388" y="364" font-size="34" fill="#24527a" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">Proposed restoration core</text>
+<text x="388" y="398" font-size="22" fill="#5f7082" font-family="Arial, Segoe UI, sans-serif" font-weight="500" text-anchor="start">Semantic-routed residual diffusion with dual-branch patch inference</text>
+<rect x="394" y="440" width="270" height="180" rx="24" ry="24" fill="#eef8f2" stroke="#3d8a69" stroke-width="2"/>
+<text x="418" y="476" font-size="28" fill="#3d8a69" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">Route fusion</text>
+<rect x="432" y="500" width="28" height="28" rx="6" ry="6" fill="#f4c36a" stroke="#9fb9aa" stroke-width="1"/>
+<rect x="466" y="500" width="28" height="28" rx="6" ry="6" fill="#d7e6da" stroke="#9fb9aa" stroke-width="1"/>
+<rect x="500" y="500" width="28" height="28" rx="6" ry="6" fill="#d7e6da" stroke="#9fb9aa" stroke-width="1"/>
+<rect x="534" y="500" width="28" height="28" rx="6" ry="6" fill="#f4c36a" stroke="#9fb9aa" stroke-width="1"/>
+<rect x="432" y="534" width="28" height="28" rx="6" ry="6" fill="#d7e6da" stroke="#9fb9aa" stroke-width="1"/>
+<rect x="466" y="534" width="28" height="28" rx="6" ry="6" fill="#d7e6da" stroke="#9fb9aa" stroke-width="1"/>
+<rect x="500" y="534" width="28" height="28" rx="6" ry="6" fill="#f4c36a" stroke="#9fb9aa" stroke-width="1"/>
+<rect x="534" y="534" width="28" height="28" rx="6" ry="6" fill="#d7e6da" stroke="#9fb9aa" stroke-width="1"/>
+<rect x="432" y="568" width="28" height="28" rx="6" ry="6" fill="#d7e6da" stroke="#9fb9aa" stroke-width="1"/>
+<rect x="466" y="568" width="28" height="28" rx="6" ry="6" fill="#f4c36a" stroke="#9fb9aa" stroke-width="1"/>
+<rect x="500" y="568" width="28" height="28" rx="6" ry="6" fill="#d7e6da" stroke="#9fb9aa" stroke-width="1"/>
+<rect x="534" y="568" width="28" height="28" rx="6" ry="6" fill="#d7e6da" stroke="#9fb9aa" stroke-width="1"/>
+<rect x="432" y="602" width="28" height="28" rx="6" ry="6" fill="#f4c36a" stroke="#9fb9aa" stroke-width="1"/>
+<rect x="466" y="602" width="28" height="28" rx="6" ry="6" fill="#d7e6da" stroke="#9fb9aa" stroke-width="1"/>
+<rect x="500" y="602" width="28" height="28" rx="6" ry="6" fill="#d7e6da" stroke="#9fb9aa" stroke-width="1"/>
+<rect x="534" y="602" width="28" height="28" rx="6" ry="6" fill="#f4c36a" stroke="#9fb9aa" stroke-width="1"/>
+<text x="558" y="516" font-size="20" fill="#16324a" font-family="Arial, Segoe UI, sans-serif" font-weight="600" text-anchor="start">semantic mask</text>
+<text x="558" y="544" font-size="20" fill="#16324a" font-family="Arial, Segoe UI, sans-serif" font-weight="600" text-anchor="start">U  cloud mask</text>
+<text x="558" y="572" font-size="18" fill="#5f7082" font-family="Arial, Segoe UI, sans-serif" font-weight="500" text-anchor="start">route patch size = 128</text>
+<rect x="714" y="440" width="250" height="180" rx="24" ry="24" fill="#f3f5f7" stroke="#728091" stroke-width="2"/>
+<text x="742" y="476" font-size="28" fill="#728091" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">Patch routing</text>
+<rect x="754" y="502" width="28" height="28" rx="6" ry="6" fill="#e7ecf2" stroke="#b5c0cb" stroke-width="1"/>
+<rect x="788" y="502" width="28" height="28" rx="6" ry="6" fill="#e7ecf2" stroke="#b5c0cb" stroke-width="1"/>
+<rect x="822" y="502" width="28" height="28" rx="6" ry="6" fill="#e7ecf2" stroke="#b5c0cb" stroke-width="1"/>
+<rect x="856" y="502" width="28" height="28" rx="6" ry="6" fill="#e7ecf2" stroke="#b5c0cb" stroke-width="1"/>
+<rect x="890" y="502" width="28" height="28" rx="6" ry="6" fill="#fff2e8" stroke="#c87634" stroke-width="1"/>
+<rect x="754" y="536" width="28" height="28" rx="6" ry="6" fill="#e7ecf2" stroke="#b5c0cb" stroke-width="1"/>
+<rect x="788" y="536" width="28" height="28" rx="6" ry="6" fill="#fff2e8" stroke="#c87634" stroke-width="1"/>
+<rect x="822" y="536" width="28" height="28" rx="6" ry="6" fill="#e7ecf2" stroke="#b5c0cb" stroke-width="1"/>
+<rect x="856" y="536" width="28" height="28" rx="6" ry="6" fill="#fff2e8" stroke="#c87634" stroke-width="1"/>
+<rect x="890" y="536" width="28" height="28" rx="6" ry="6" fill="#e7ecf2" stroke="#b5c0cb" stroke-width="1"/>
+<rect x="754" y="570" width="28" height="28" rx="6" ry="6" fill="#e7ecf2" stroke="#b5c0cb" stroke-width="1"/>
+<rect x="788" y="570" width="28" height="28" rx="6" ry="6" fill="#e7ecf2" stroke="#b5c0cb" stroke-width="1"/>
+<rect x="822" y="570" width="28" height="28" rx="6" ry="6" fill="#e7ecf2" stroke="#b5c0cb" stroke-width="1"/>
+<rect x="856" y="570" width="28" height="28" rx="6" ry="6" fill="#e7ecf2" stroke="#b5c0cb" stroke-width="1"/>
+<rect x="890" y="570" width="28" height="28" rx="6" ry="6" fill="#e7ecf2" stroke="#b5c0cb" stroke-width="1"/>
+<text x="738" y="572" font-size="18" fill="#16324a" font-family="Arial, Segoe UI, sans-serif" font-weight="600" text-anchor="start">route mode = max</text>
+<text x="738" y="598" font-size="18" fill="#16324a" font-family="Arial, Segoe UI, sans-serif" font-weight="600" text-anchor="start">threshold = 0.005</text>
+<rect x="1014" y="430" width="520" height="210" rx="26" ry="26" fill="#ffffff" stroke="#24527a" stroke-width="2"/>
+<text x="1040" y="466" font-size="30" fill="#24527a" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">Dual-branch denoiser</text>
+<rect x="1050" y="504" width="180" height="102" rx="22" ry="22" fill="#fff2e8" stroke="#c87634" stroke-width="2"/>
+<text x="1110" y="540" font-size="24" fill="#c87634" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="middle">Light branch</text>
+<rect x="1084" y="558" width="22" height="26" rx="6" ry="6" fill="#ffd9bf" stroke="#c87634" stroke-width="1"/>
+<rect x="1120" y="558" width="22" height="26" rx="6" ry="6" fill="#ffd9bf" stroke="#c87634" stroke-width="1"/>
+<rect x="1156" y="558" width="22" height="26" rx="6" ry="6" fill="#ffd9bf" stroke="#c87634" stroke-width="1"/>
+<text x="1140" y="598" font-size="18" fill="#5f7082" font-family="Arial, Segoe UI, sans-serif" font-weight="500" text-anchor="middle">background denoising</text>
+<rect x="1310" y="494" width="190" height="120" rx="22" ry="22" fill="#f5efff" stroke="#8f68bd" stroke-width="2"/>
+<text x="1405" y="534" font-size="24" fill="#8f68bd" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="middle">Heavy branch</text>
+<rect x="1342" y="544" width="18" height="36" rx="6" ry="6" fill="#dbcdf0" stroke="#8f68bd" stroke-width="1"/>
+<rect x="1374" y="532" width="18" height="48" rx="6" ry="6" fill="#dbcdf0" stroke="#8f68bd" stroke-width="1"/>
+<rect x="1406" y="516" width="18" height="64" rx="6" ry="6" fill="#dbcdf0" stroke="#8f68bd" stroke-width="1"/>
+<rect x="1438" y="502" width="18" height="78" rx="6" ry="6" fill="#dbcdf0" stroke="#8f68bd" stroke-width="1"/>
+<text x="1405" y="598" font-size="18" fill="#5f7082" font-family="Arial, Segoe UI, sans-serif" font-weight="500" text-anchor="middle">ImageTransformer backbone</text>
+<rect x="1000" y="688" width="560" height="132" rx="24" ry="24" fill="#fbfcff" stroke="#24527a" stroke-width="2"/>
+<text x="1030" y="728" font-size="28" fill="#24527a" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">Patch merge and image reconstruction</text>
+<rect x="1064" y="750" width="22" height="14" rx="4" ry="4" fill="#f4c36a" stroke="#aabed4" stroke-width="1"/>
+<rect x="1092" y="750" width="22" height="14" rx="4" ry="4" fill="#dce8f7" stroke="#aabed4" stroke-width="1"/>
+<rect x="1120" y="750" width="22" height="14" rx="4" ry="4" fill="#dce8f7" stroke="#aabed4" stroke-width="1"/>
+<rect x="1148" y="750" width="22" height="14" rx="4" ry="4" fill="#dce8f7" stroke="#aabed4" stroke-width="1"/>
+<rect x="1176" y="750" width="22" height="14" rx="4" ry="4" fill="#f4c36a" stroke="#aabed4" stroke-width="1"/>
+<rect x="1204" y="750" width="22" height="14" rx="4" ry="4" fill="#dce8f7" stroke="#aabed4" stroke-width="1"/>
+<rect x="1232" y="750" width="22" height="14" rx="4" ry="4" fill="#dce8f7" stroke="#aabed4" stroke-width="1"/>
+<rect x="1260" y="750" width="22" height="14" rx="4" ry="4" fill="#dce8f7" stroke="#aabed4" stroke-width="1"/>
+<rect x="1064" y="770" width="22" height="14" rx="4" ry="4" fill="#dce8f7" stroke="#aabed4" stroke-width="1"/>
+<rect x="1092" y="770" width="22" height="14" rx="4" ry="4" fill="#dce8f7" stroke="#aabed4" stroke-width="1"/>
+<rect x="1120" y="770" width="22" height="14" rx="4" ry="4" fill="#dce8f7" stroke="#aabed4" stroke-width="1"/>
+<rect x="1148" y="770" width="22" height="14" rx="4" ry="4" fill="#f4c36a" stroke="#aabed4" stroke-width="1"/>
+<rect x="1176" y="770" width="22" height="14" rx="4" ry="4" fill="#dce8f7" stroke="#aabed4" stroke-width="1"/>
+<rect x="1204" y="770" width="22" height="14" rx="4" ry="4" fill="#dce8f7" stroke="#aabed4" stroke-width="1"/>
+<rect x="1232" y="770" width="22" height="14" rx="4" ry="4" fill="#dce8f7" stroke="#aabed4" stroke-width="1"/>
+<rect x="1260" y="770" width="22" height="14" rx="4" ry="4" fill="#f4c36a" stroke="#aabed4" stroke-width="1"/>
+<rect x="1064" y="790" width="22" height="14" rx="4" ry="4" fill="#dce8f7" stroke="#aabed4" stroke-width="1"/>
+<rect x="1092" y="790" width="22" height="14" rx="4" ry="4" fill="#dce8f7" stroke="#aabed4" stroke-width="1"/>
+<rect x="1120" y="790" width="22" height="14" rx="4" ry="4" fill="#f4c36a" stroke="#aabed4" stroke-width="1"/>
+<rect x="1148" y="790" width="22" height="14" rx="4" ry="4" fill="#dce8f7" stroke="#aabed4" stroke-width="1"/>
+<rect x="1176" y="790" width="22" height="14" rx="4" ry="4" fill="#dce8f7" stroke="#aabed4" stroke-width="1"/>
+<rect x="1204" y="790" width="22" height="14" rx="4" ry="4" fill="#dce8f7" stroke="#aabed4" stroke-width="1"/>
+<rect x="1232" y="790" width="22" height="14" rx="4" ry="4" fill="#f4c36a" stroke="#aabed4" stroke-width="1"/>
+<rect x="1260" y="790" width="22" height="14" rx="4" ry="4" fill="#dce8f7" stroke="#aabed4" stroke-width="1"/>
+<text x="1340" y="774" font-size="18" fill="#5f7082" font-family="Arial, Segoe UI, sans-serif" font-weight="500" text-anchor="start">heavy patches replace selected regions</text>
+<polyline points="664,530 714,530" fill="none" stroke="#24527a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="964,530 1014,530" fill="none" stroke="#24527a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1230,554 1310,554" fill="none" stroke="#24527a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1140,606 1140,688" fill="none" stroke="#24527a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1405,614 1405,688" fill="none" stroke="#24527a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="1670" y="320" width="420" height="760" rx="28" ry="28" fill="#fff2e8" stroke="#c87634" stroke-width="3"/>
+<text x="1698" y="364" font-size="32" fill="#c87634" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">Innovation-aware objectives</text>
+<text x="1698" y="398" font-size="20" fill="#5f7082" font-family="Arial, Segoe UI, sans-serif" font-weight="500" text-anchor="start">Loss branches are shown as modules rather than plain text descriptions</text>
+<rect x="1704" y="440" width="330" height="150" rx="22" ry="22" fill="#ffffff" stroke="#c87634" stroke-width="2"/>
+<text x="1732" y="482" font-size="26" fill="#c87634" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">Cloud-aware</text>
+<text x="1732" y="514" font-size="26" fill="#c87634" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">importance loss</text>
+<path d="M 1936.0,539.6 C 1922.0,539.6 1918.0,531.712 1918.0,527.072 C 1918.0,520.576 1932.0,516.4 1948.0,516.4 C 1952.0,508.048 1972.0,504.8 1992.0,508.512 C 2000.0,503.872 2022.0,509.44 2022.0,517.792 C 2032.0,518.72 2014.0,524.288 2014.0,531.712 C 2014.0,537.28 2004.0,540.992 1992.0,540.992 Z" fill="#ffffff" stroke="#b8c8d8" stroke-width="2"/>
+<text x="1732" y="548" font-size="18" fill="#5f7082" font-family="Arial, Segoe UI, sans-serif" font-weight="500" text-anchor="start">higher weights on cloud-covered regions</text>
+<rect x="1704" y="624" width="330" height="170" rx="22" ry="22" fill="#ffffff" stroke="#8f68bd" stroke-width="2"/>
+<text x="1732" y="666" font-size="26" fill="#8f68bd" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">Asymmetric semantic</text>
+<text x="1732" y="698" font-size="26" fill="#8f68bd" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">feature matching</text>
+<rect x="1914" y="674" width="18" height="64" rx="5" ry="5" fill="#d9ccf0" stroke="#8f68bd" stroke-width="1"/>
+<rect x="1936" y="684" width="18" height="54" rx="5" ry="5" fill="#d9ccf0" stroke="#8f68bd" stroke-width="1"/>
+<rect x="1958" y="694" width="18" height="44" rx="5" ry="5" fill="#d9ccf0" stroke="#8f68bd" stroke-width="1"/>
+<rect x="1980" y="704" width="18" height="34" rx="5" ry="5" fill="#d9ccf0" stroke="#8f68bd" stroke-width="1"/>
+<text x="1732" y="736" font-size="18" fill="#5f7082" font-family="Arial, Segoe UI, sans-serif" font-weight="500" text-anchor="start">semantic foreground and background</text>
+<text x="1732" y="762" font-size="18" fill="#5f7082" font-family="Arial, Segoe UI, sans-serif" font-weight="500" text-anchor="start">are weighted differently in VGG space</text>
+<rect x="1704" y="828" width="330" height="100" rx="22" ry="22" fill="#fffaf5" stroke="#c87634" stroke-width="2"/>
+<text x="1732" y="870" font-size="26" fill="#c87634" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">Residual EDM weighting</text>
+<circle cx="1974" cy="882" r="28" fill="none" stroke="#c87634" stroke-width="2" opacity="1.0"/>
+<circle cx="1974" cy="882" r="22" fill="none" stroke="#c87634" stroke-width="2" opacity="0.8200000000000001"/>
+<circle cx="1974" cy="882" r="16" fill="none" stroke="#c87634" stroke-width="2" opacity="0.64"/>
+<text x="1732" y="902" font-size="18" fill="#5f7082" font-family="Arial, Segoe UI, sans-serif" font-weight="500" text-anchor="start">sigma-aware residual weighting</text>
+<rect x="1704" y="960" width="330" height="92" rx="22" ry="22" fill="#fffdf8" stroke="#24527a" stroke-width="2"/>
+<text x="1732" y="1002" font-size="26" fill="#24527a" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">Total restoration objective</text>
+<text x="1732" y="1032" font-size="18" fill="#5f7082" font-family="Arial, Segoe UI, sans-serif" font-weight="500" text-anchor="start">pixel reconstruction + 0.10 * semantic FM</text>
+<polyline points="1870,590 1870,624" fill="none" stroke="#c87634" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1870,794 1870,828" fill="none" stroke="#c87634" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1870,928 1870,960" fill="none" stroke="#c87634" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1630,700 1670,700" fill="none" stroke="#24527a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="360" y="1110" width="1730" height="210" rx="28" ry="28" fill="#eef8f2" stroke="#3d8a69" stroke-width="3"/>
+<text x="388" y="1154" font-size="30" fill="#3d8a69" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">Inference and restored output</text>
+<text x="388" y="1186" font-size="20" fill="#5f7082" font-family="Arial, Segoe UI, sans-serif" font-weight="500" text-anchor="start">The same semantic-routed module is reused during reverse diffusion</text>
+<rect x="402" y="1228" width="240" height="110" rx="20" ry="20" fill="#ffffff" stroke="#3d8a69" stroke-width="2"/>
+<text x="430" y="1266" font-size="26" fill="#3d8a69" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">Residual Heun</text>
+<text x="430" y="1298" font-size="26" fill="#3d8a69" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">EDM sampler</text>
+<circle cx="432" cy="1316" r="5" fill="#3d8a69" opacity="0.4"/>
+<circle cx="450" cy="1316" r="5" fill="#3d8a69" opacity="0.47000000000000003"/>
+<circle cx="468" cy="1316" r="5" fill="#3d8a69" opacity="0.54"/>
+<circle cx="486" cy="1316" r="5" fill="#3d8a69" opacity="0.6100000000000001"/>
+<circle cx="504" cy="1316" r="5" fill="#3d8a69" opacity="0.68"/>
+<circle cx="522" cy="1316" r="5" fill="#3d8a69" opacity="0.75"/>
+<circle cx="540" cy="1316" r="5" fill="#3d8a69" opacity="0.8200000000000001"/>
+<circle cx="558" cy="1316" r="5" fill="#3d8a69" opacity="0.8900000000000001"/>
+<rect x="700" y="1228" width="330" height="110" rx="20" ry="20" fill="#ffffff" stroke="#3d8a69" stroke-width="2"/>
+<text x="728" y="1266" font-size="24" fill="#24527a" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">Semantic-routed denoiser</text>
+<text x="728" y="1298" font-size="18" fill="#5f7082" font-family="Arial, Segoe UI, sans-serif" font-weight="500" text-anchor="start">semantic_mask + cloud mask stay active</text>
+<rect x="1090" y="1212" width="250" height="126" rx="20" ry="20" fill="#ffffff" stroke="#3d8a69" stroke-width="2"/>
+<text x="1120" y="1256" font-size="28" fill="#3d8a69" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">Restored image</text>
+<rect x="1140" y="1274" width="150" height="42" rx="12" ry="12" fill="#dce8f7" stroke="#adc0d3" stroke-width="1"/>
+<text x="1215" y="1303" font-size="18" fill="#16324a" font-family="Arial, Segoe UI, sans-serif" font-weight="600" text-anchor="middle">cloud-free output</text>
+<rect x="1400" y="1194" width="300" height="162" rx="22" ry="22" fill="#ffffff" stroke="#3d8a69" stroke-width="2"/>
+<text x="1428" y="1230" font-size="24" fill="#3d8a69" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="start">Visual output and downstream use</text>
+<rect x="1430" y="1250" width="110" height="80" rx="14" ry="14" fill="#6f9fc5" stroke="#8ba6bc" stroke-width="0"/>
+<rect x="1560" y="1250" width="110" height="80" rx="14" ry="14" fill="#e5edf5" stroke="#8ba6bc" stroke-width="1"/>
+<path d="M 1469.0,1301.975 C 1455.0,1301.975 1451.0,1296.552 1451.0,1293.3619999999999 C 1451.0,1288.896 1465.0,1286.0249999999999 1481.0,1286.0249999999999 C 1485.0,1280.283 1505.0,1278.05 1525.0,1280.6019999999999 C 1533.0,1277.412 1555.0,1281.24 1555.0,1286.982 C 1565.0,1287.62 1517.0,1291.4479999999999 1517.0,1296.552 C 1517.0,1300.3799999999999 1507.0,1302.932 1495.0,1302.932 Z" fill="#ffffff" stroke="#b8c8d8" stroke-width="2"/>
+<rect x="1580" y="1274" width="16" height="42" rx="4" ry="4" fill="#d9ccf0" stroke="#8f68bd" stroke-width="1"/>
+<rect x="1604" y="1266" width="16" height="50" rx="4" ry="4" fill="#d9ccf0" stroke="#8f68bd" stroke-width="1"/>
+<rect x="1628" y="1258" width="16" height="58" rx="4" ry="4" fill="#d9ccf0" stroke="#8f68bd" stroke-width="1"/>
+<polyline points="642,1282 700,1282" fill="none" stroke="#3d8a69" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1030,1282 1090,1282" fill="none" stroke="#3d8a69" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1340,1282 1400,1282" fill="none" stroke="#3d8a69" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="470" y="286" width="210" height="46" rx="18" ry="18" fill="#eef8f2" stroke="#3d8a69" stroke-width="2"/>
+<text x="575" y="317" font-size="20" fill="#16324a" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="middle">I1  Route-mask fusion</text>
+<rect x="702" y="286" width="230" height="46" rx="18" ry="18" fill="#edf4ff" stroke="#24527a" stroke-width="2"/>
+<text x="817" y="317" font-size="20" fill="#16324a" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="middle">I2  Patch-level semantic routing</text>
+<rect x="956" y="286" width="220" height="46" rx="18" ry="18" fill="#fff2e8" stroke="#c87634" stroke-width="2"/>
+<text x="1066" y="317" font-size="20" fill="#16324a" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="middle">I3  Dual-branch denoiser</text>
+<rect x="1198" y="286" width="248" height="46" rx="18" ry="18" fill="#f5efff" stroke="#8f68bd" stroke-width="2"/>
+<text x="1322" y="317" font-size="20" fill="#16324a" font-family="Arial, Segoe UI, sans-serif" font-weight="700" text-anchor="middle">I4  Semantic-aware objective</text>
+<text x="72" y="1336" font-size="20" fill="#5f7082" font-family="Arial, Segoe UI, sans-serif" font-weight="500" text-anchor="start">Tip: if you still want to show detection, place it in a second panel named 'Downstream rotated object detection evaluation' and mark it as external.</text>
+</svg>

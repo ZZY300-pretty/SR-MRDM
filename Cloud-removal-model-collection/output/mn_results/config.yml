@@ -1,0 +1,32 @@
+# folder path of dataset, which includes train/ and test/ splits
+datasets_dir: "./datasets/my_dota_cloud"
+
+# output directory for logs, checkpoints and rendered samples
+out_dir: "./output/mn_results"
+
+cuda: true
+gpu_ids: [0]
+
+batchsize: 2
+validation_batchsize: 1
+epoch: 200
+n_data: 433
+width: 256
+height: 256
+threads: 0
+
+lr: 0.0001
+beta1: 0.5
+lamb: 100
+minimax: 1
+
+gen_init:
+dis_init:
+in_ch: 3
+out_ch: 3
+
+manualSeed: 0
+snapshot_interval: 1
+
+model: mn
+print_every: 50

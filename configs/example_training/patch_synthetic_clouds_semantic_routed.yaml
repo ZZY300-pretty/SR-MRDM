@@ -1,0 +1,229 @@
+model:
+  base_learning_rate: 1.0e-4
+  target: sgm.models.diffusion.ResidualDiffusionEngine
+  params:
+    input_key: "label"
+    mean_key: "cond_image"
+    compile_model: False
+    use_ema: True
+    use_flash_attn2: False
+    image_metrics: "evaluator"
+
+    sigma_st_config:
+      target: sgm.modules.diffusionmodules.sigma2st.EDMSigma2St
+      params:
+        alpha: 3.0
+
+    denoiser_config:
+      target: sgm.modules.diffusionmodules.denoiser.ResidualDenoiser
+      params:
+        scaling_config:
+          target: sgm.modules.diffusionmodules.denoiser_scaling.ResidualEDMScaling
+          params:
+            sigma_input: 1.0
+            sigma_mu: 1.0
+
+    network_wrapper: "sgm.modules.diffusionmodules.wrappers.CloudRemovalWrapper"
+
+    network_config:
+      target: sgm.modules.diffusionmodules.semantic_routed_denoiser.SemanticRoutedPatchDenoiser
+      params:
+        in_channels: 6
+        out_channels: 3
+        route_patch_size: 128
+        route_threshold: 0.005
+        route_mode: "max"
+        semantic_mask_key: "semantic_mask"
+        semantic_mask_available_key: "semantic_mask_available"
+        cloud_mask_key: "M"
+        route_with_cloud_mask: True
+        route_mask_combine_mode: "union"
+        light_branch_hidden_channels: 32
+        light_branch_num_layers: 2
+        use_shared_background: True
+        use_background_feature_fusion: False
+        background_feature_channels: 64
+        background_feature_hidden_channels: 64
+        background_feature_num_layers: 4
+        heavy_feature_fusion_mode: "film"
+        heavy_feature_hidden_channels: 64
+        heavy_feature_num_layers: 2
+        use_transformer_background_context: False
+        transformer_background_context_channels: 64
+        transformer_background_context_hidden_channels: 64
+        transformer_background_context_num_layers: 4
+        merge_stride: 64
+        heavy_patch_blend_margin: 16
+        fallback_to_backbone_without_mask: True
+        backbone_config:
+          target: sgm.modules.diffusionmodules.k_diffusion.image_transformer.ImageTransformerDenoiserModelInterface
+          params:
+            in_channels: 6
+            out_channels: 3
+            patch_size: [4, 4]
+            widths: [64, 128, 256, 512]
+            depths: [2, 2, 2, 2]
+            d_ffs: [128, 256, 512, 1024]
+            self_attns: [
+              {"type": "neighborhood", "d_head": 64, "kernel_size": 7},
+              {"type": "neighborhood", "d_head": 64, "kernel_size": 7},
+              {"type": "global", "d_head": 64},
+              {"type": "global", "d_head": 64},
+            ]
+            dropout_rate: [0.0, 0.0, 0.0, 0.1]
+            mapping_depth: 2
+            mapping_width: 512
+            mapping_d_ff: 1024
+            mapping_dropout_rate: 0.1
+            use_background_context_injection: False
+            background_context_in_channels: 64
+            background_context_level_indices: [2, 3]
+            use_parallel_conv_fusion: True
+            parallel_conv_fusion_levels: 2
+            conv_fusion_margin: 16
+            bidirectional_attention: True
+
+    conditioner_config:
+      target: sgm.modules.GeneralConditioner
+      params:
+        emb_models:
+          - is_trainable: True
+            input_key: "cond_image"
+            ucg_rate: 0.0
+            target: sgm.modules.encoders.modules.IndentityEmbedder
+
+    first_stage_config:
+      target: sgm.models.autoencoder.IdentityFirstStage
+
+    loss_fn_config:
+      target: sgm.modules.diffusionmodules.importance_loss.SemanticFeatureMatchingResidualDiffusionLoss
+      params:
+        mask_key: "M"
+        importance_weight: 4.0
+        background_weight: 1.0
+        mask_power: 1.0
+        normalize_importance: True
+        feature_matching_weight: 0.10
+        batch2model_keys: ["semantic_mask", "semantic_mask_available", "M"]
+        feature_matching_config:
+          target: sgm.modules.diffusionmodules.semantic_feature_matching.MaskWeightedAsymmetricFeatureMatchingLoss
+          params:
+            layers: ["relu2_2", "relu3_3", "relu4_3"]
+            layer_weights: [0.25, 0.45, 0.30]
+            feature_distance: "l1"
+            semantic_mask_key: "semantic_mask"
+            semantic_mask_available_key: "semantic_mask_available"
+            cloud_mask_key: "M"
+            foreground_weight: 1.0
+            background_weight: 0.10
+            cloud_foreground_boost: 1.5
+            cloud_background_boost: 0.25
+            normalize_by_mask_area: True
+            pretrained_backbone: True
+            use_input_scaling: True
+            normalize_features: True
+        loss_weighting_config:
+          target: sgm.modules.diffusionmodules.loss_weighting.ResidualEDMWeighting
+          params:
+            sigma_input: 1.0
+            sigma_mu: 1.0
+        sigma_sampler_config:
+          target: sgm.modules.diffusionmodules.sigma_sampling.EDMSampling
+          params:
+            p_mean: -1.4
+            p_std: 1.4
+
+    sampler_config:
+      target: sgm.modules.diffusionmodules.sampling.ResidualHeunEDMSampler
+      params:
+        num_steps: 8
+        discretization_config:
+          target: sgm.modules.diffusionmodules.discretizer.EDMDiscretization
+          params:
+            sigma_min: 0.001
+            sigma_max: 60.0
+
+    to_rgb_config:
+      target: sgm.util.identity_to_rgb
+
+data:
+  target: sgm.data.base.DataModuleFromConfig
+  params:
+    batch_size: 1
+    num_workers: 8
+    wrap: True
+    train:
+      target: sgm.data.patches.cloud_patch_dataset.CloudRemovalPatchDataset
+      params:
+        dataset_root: "/mnt/mydisk/zwj/zzy/EMRDM-main/datasets/archive_random_10pct_experiment_crops_heavy_cloud"
+        split: "train"
+        require_mask: True
+        return_semantic_mask: True
+        semantic_mask_dirname: "semantic_masks"
+
+    validation:
+      target: sgm.data.patches.cloud_patch_dataset.CloudRemovalPatchDataset
+      params:
+        dataset_root: "/mnt/mydisk/zwj/zzy/EMRDM-main/datasets/archive_random_10pct_experiment_crops_heavy_cloud"
+        split: "val"
+        require_mask: True
+        return_semantic_mask: True
+        semantic_mask_dirname: "semantic_masks"
+
+    test:
+      target: sgm.data.patches.cloud_patch_dataset.CloudRemovalPatchDataset
+      params:
+        dataset_root: "/mnt/mydisk/zwj/zzy/EMRDM-main/datasets/archive_random_10pct_experiment_crops_heavy_cloud"                                                                                                                                    
+        split: "test"
+        require_mask: True
+        return_semantic_mask: True
+        semantic_mask_dirname: "semantic_masks"
+
+    predict:
+      target: sgm.data.patches.cloud_patch_dataset.CloudRemovalPatchDataset
+      params:
+        dataset_root: "/mnt/mydisk/zwj/zzy/EMRDM-main/datasets/archive_random_10pct_experiment_crops_heavy_cloud"
+        split: "test"
+        require_mask: True
+        return_semantic_mask: True
+        semantic_mask_dirname: "semantic_masks"
+
+lightning:
+  modelcheckpoint:
+    params:
+      every_n_train_steps: 1000
+      monitor: "RMSE"
+
+  callbacks:
+    metrics_over_trainsteps_checkpoint:
+      params:
+        every_n_train_steps: 5000
+
+    image_logger:
+      target: main.ImageLogger
+      params:
+        disabled: False
+        batch_frequency: 2000
+        max_images: 4
+        increase_log_steps: False
+        log_first_step: False
+        log_images_kwargs:
+          use_ema_scope: False
+          N: 4
+          n_rows: 2
+          return_intermediate: False
+          return_denoised: False
+          return_add_mu: False
+          return_add_noise: False
+          return_cond: True
+
+  trainer:
+    devices: "0,"
+    precision: "16-mixed"
+    strategy: "ddp_find_unused_parameters_true"
+    num_sanity_val_steps: 0
+    benchmark: True
+    accumulate_grad_batches: 8
+    check_val_every_n_epoch: 1
+    max_epochs: 200
+    log_every_n_steps: 20

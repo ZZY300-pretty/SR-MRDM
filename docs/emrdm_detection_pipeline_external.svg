@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="980" viewBox="0 0 2100 980">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#224d73"/>
+  </marker>
+</defs>
+
+<rect width="2100" height="980" fill="#f6f2ea"/>
+<rect x="40" y="28" width="2020" height="120" rx="28" ry="28" fill="#183b5b" stroke="#183b5b" stroke-width="1"/>
+<text x="70" y="86" font-size="42" font-family="Arial, Segoe UI, sans-serif" fill="#ffffff" font-weight="700">Downstream Rotated Object Detection Evaluation</text>
+<text x="70" y="122" font-size="22" font-family="Arial, Segoe UI, sans-serif" fill="#d8e7f5" font-weight="500">The detector platform is external to EMRDM and is used only for downstream evaluation</text>
+<rect x="40" y="180" width="2020" height="740" rx="30" ry="30" fill="#fffdf9" stroke="#224d73" stroke-width="3"/>
+<text x="70" y="238" font-size="32" font-family="Arial, Segoe UI, sans-serif" fill="#224d73" font-weight="700">Separate application figure</text>
+<rect x="90" y="340" width="260" height="190" rx="20" ry="20" fill="#eef8f2" stroke="#4f8668" stroke-width="2"/>
+<text x="220.0" y="428.0" font-size="28" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Cloudy remote-sensing patch</text>
+<text x="220.0" y="463.0" font-size="28" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">cloud / test image</text>
+<rect x="430" y="300" width="420" height="270" rx="20" ry="20" fill="#eef4ff" stroke="#5b84c4" stroke-width="2"/>
+<text x="640.0" y="410.5" font-size="28" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">EMRDM restoration module</text>
+<text x="640.0" y="445.5" font-size="28" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Semantic-routed residual diffusion</text>
+<text x="640.0" y="480.5" font-size="28" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Produces restored cloud-free imagery</text>
+<rect x="930" y="340" width="280" height="190" rx="20" ry="20" fill="#ffffff" stroke="#5b84c4" stroke-width="2"/>
+<text x="1070.0" y="428.0" font-size="28" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Restored image</text>
+<text x="1070.0" y="463.0" font-size="28" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">for detector input</text>
+<rect x="1290" y="260" width="600" height="360" rx="28" ry="28" fill="#fbfbfd" stroke="#6b7280" stroke-width="3" stroke-dasharray="12 9"/>
+<text x="1320" y="318" font-size="30" font-family="Arial, Segoe UI, sans-serif" fill="#6b7280" font-weight="700">External detector toolbox</text>
+<rect x="1350" y="360" width="480" height="120" rx="20" ry="20" fill="#fff3ea" stroke="#b96c34" stroke-width="2"/>
+<text x="1590.0" y="413.0" font-size="28" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Off-the-shelf rotated detector</text>
+<text x="1590.0" y="448.0" font-size="28" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">MMRotate / Faster R-CNN / YOLO-OBB</text>
+<rect x="1350" y="520" width="480" height="70" rx="20" ry="20" fill="#fffaf5" stroke="#b96c34" stroke-width="2"/>
+<text x="1590.0" y="563.5" font-size="24" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Not a learnable component of EMRDM</text>
+<rect x="930" y="680" width="320" height="120" rx="20" ry="20" fill="#f6efff" stroke="#8b62b8" stroke-width="2"/>
+<text x="1090.0" y="733.0" font-size="26" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Detection outputs</text>
+<text x="1090.0" y="766.0" font-size="26" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">rotated boxes / category scores</text>
+<rect x="1350" y="680" width="480" height="120" rx="20" ry="20" fill="#ffffff" stroke="#8b62b8" stroke-width="2"/>
+<text x="1590.0" y="733.0" font-size="26" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Evaluation metrics</text>
+<text x="1590.0" y="766.0" font-size="26" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">mAP, AP50, downstream robustness</text>
+<rect x="90" y="680" width="760" height="120" rx="20" ry="20" fill="#eef8f2" stroke="#4f8668" stroke-width="2"/>
+<text x="470.0" y="733.0" font-size="24" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Optional annotation conversion and dataset adapters</text>
+<text x="470.0" y="764.0" font-size="24" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">for iSAID / DOTA / COCO / OBB evaluation pipelines</text>
+<rect x="470" y="250" width="340" height="44" rx="18" ry="18" fill="#eef4ff" stroke="#5b84c4" stroke-width="2"/>
+<text x="640.0" y="278.5" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">Main paper method</text>
+<rect x="1450" y="250" width="270" height="44" rx="18" ry="18" fill="#f7f7f9" stroke="#6b7280" stroke-width="2"/>
+<text x="1585.0" y="278.5" font-size="20" text-anchor="middle" font-family="Arial, Segoe UI, sans-serif" fill="#1f2933" font-weight="700">External evaluation tool</text>
+<polyline points="350,435 430,435" fill="none" stroke="#224d73" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="850,435 930,435" fill="none" stroke="#224d73" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1210,435 1350,435" fill="none" stroke="#224d73" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1590,480 1590,680 1250,680 1250,740" fill="none" stroke="#b96c34" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1590,590 1590,680 1830,680 1830,740" fill="none" stroke="#b96c34" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="850,740 930,740" fill="none" stroke="#4f8668" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="10 8"/>
+<text x="90" y="875" font-size="22" font-family="Arial, Segoe UI, sans-serif" fill="#5f6b7a" font-weight="500">Recommended usage in the paper: keep this panel separate from the core EMRDM framework and describe the detector as an external downstream benchmark.</text>
+</svg>

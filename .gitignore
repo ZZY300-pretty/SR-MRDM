@@ -1,0 +1,52 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Model checkpoints / weights
+*.pth
+*.ckpt
+
+# MMRotate training outputs
+mmrotate-main/work_dirs/
+
+# EMRDM experiment logs
+logs*/
+
+# Dataset images
+FAIR1M/Notebook_Working/train_images/
+
+# =========================
+# Datasets
+# =========================
+datasets/
+FAIR1M/
+Cloud-removal-model-collection/datasets/
+Restormer/Datasets/
+
+# =========================
+# Training / evaluation outputs
+# =========================
+mmrotate-main/work_dirs/
+logs*/
+logs_eval_restored_images/
+runs/
+
+# =========================
+# Model checkpoints / weights
+# =========================
+checkpoints/
+*.pth
+*.ckpt
+
+# =========================
+# Python cache
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+
+# =========================
+# IDE / temp
+# =========================
+.vscode/

@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1460" viewBox="0 0 2200 1460">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#f4efe5"/>
+    <stop offset="45%" stop-color="#eef6fb"/>
+    <stop offset="100%" stop-color="#f8fbf4"/>
+  </linearGradient>
+  <linearGradient id="titlebar" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#1f516d"/>
+    <stop offset="100%" stop-color="#497d62"/>
+  </linearGradient>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#38566b"/>
+  </marker>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#203040" flood-opacity="0.12"/>
+  </filter>
+</defs>
+<rect width="100%" height="100%" fill="url(#bg)"/>
+<rect x="34" y="28" width="2132" height="96" rx="28" ry="28" fill="url(#titlebar)"/>
+
+<text x="70" y="88" font-size="42" text-anchor="start" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#ffffff" font-weight="800">语义路由残差扩散去云框架图</text>
+<text x="70" y="118" font-size="20" text-anchor="start" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#dfeff7" font-weight="500">配置源: configs/example_training/patch_synthetic_clouds_semantic_routed.yaml</text>
+<rect x="40" y="150" width="1260" height="1260" rx="28" ry="28" fill="#fcfdfd" stroke="#345c71" stroke-width="3"/>
+<text x="66" y="192" font-size="30" text-anchor="start" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#345c71" font-weight="700">A. 端到端训练与采样链路</text>
+<rect x="1330" y="150" width="830" height="1260" rx="28" ry="28" fill="#fffdf8" stroke="#8a5a2b" stroke-width="3"/>
+<text x="1356" y="192" font-size="30" text-anchor="start" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#8a5a2b" font-weight="700">B. Semantic Routed Patch Denoiser 细节</text>
+<rect x="90" y="220" width="1160" height="88" rx="18" ry="18" fill="#f3ebd8" stroke="#a48145" stroke-width="2"/>
+<text x="670.0" y="273.0" font-size="24" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#402f12" font-weight="600">实验配置: ResidualDiffusionEngine + CloudRemovalPatchDataset + SemanticRoutedPatchDenoiser</text>
+<rect x="80" y="350" width="290" height="520" rx="28" ry="28" fill="#edf7f2" stroke="#2f7a68" stroke-width="3"/>
+<text x="106" y="392" font-size="30" text-anchor="start" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#2f7a68" font-weight="700">数据层</text>
+<rect x="108" y="410" width="234" height="82" rx="18" ry="18" fill="#ffffff" stroke="#2f7a68" stroke-width="2"/>
+<text x="225.0" y="445.0" font-size="22" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">CloudRemoval</text>
+<text x="225.0" y="473.0" font-size="22" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">PatchDataset</text>
+<rect x="108" y="525" width="234" height="68" rx="18" ry="18" fill="#f8fffd" stroke="#4b9a84" stroke-width="2"/>
+<text x="225.0" y="553.0" font-size="22" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">cond_image</text>
+<text x="225.0" y="581.0" font-size="22" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">有云输入 / μ</text>
+<rect x="108" y="615" width="234" height="68" rx="18" ry="18" fill="#f8fffd" stroke="#4b9a84" stroke-width="2"/>
+<text x="225.0" y="643.0" font-size="22" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">label</text>
+<text x="225.0" y="671.0" font-size="22" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">无云真值</text>
+<rect x="108" y="705" width="234" height="68" rx="18" ry="18" fill="#f8fffd" stroke="#4b9a84" stroke-width="2"/>
+<text x="225.0" y="733.0" font-size="22" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">M</text>
+<text x="225.0" y="761.0" font-size="22" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">云掩码</text>
+<rect x="108" y="795" width="234" height="68" rx="18" ry="18" fill="#f8fffd" stroke="#4b9a84" stroke-width="2"/>
+<text x="225.0" y="823.0" font-size="20" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">semantic_mask</text>
+<text x="225.0" y="849.0" font-size="20" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">semantic_mask_available</text>
+<line x1="225" y1="492" x2="225" y2="525" stroke="#2f7a68" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="225" y1="492" x2="225" y2="615" stroke="#2f7a68" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="225" y1="492" x2="225" y2="705" stroke="#2f7a68" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="225" y1="492" x2="225" y2="795" stroke="#2f7a68" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="405" y="350" width="800" height="700" rx="28" ry="28" fill="#eef3fb" stroke="#4966b4" stroke-width="3"/>
+<text x="431" y="392" font-size="30" text-anchor="start" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#4966b4" font-weight="700">训练主干</text>
+<rect x="450" y="410" width="255" height="84" rx="18" ry="18" fill="#ffffff" stroke="#4966b4" stroke-width="2"/>
+<text x="577.5" y="446.0" font-size="22" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">ResidualDiffusion</text>
+<text x="577.5" y="474.0" font-size="22" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">Engine</text>
+<rect x="760" y="410" width="210" height="84" rx="18" ry="18" fill="#fbfdff" stroke="#5a7dd1" stroke-width="2"/>
+<text x="865.0" y="446.0" font-size="22" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">IdentityFirstStage</text>
+<text x="865.0" y="474.0" font-size="22" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">编码 label</text>
+<rect x="995" y="410" width="170" height="84" rx="18" ry="18" fill="#fbfdff" stroke="#5a7dd1" stroke-width="2"/>
+<text x="1080.0" y="446.0" font-size="22" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">IdentityFirstStage</text>
+<text x="1080.0" y="474.0" font-size="22" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">编码 μ</text>
+<rect x="450" y="540" width="255" height="82" rx="18" ry="18" fill="#ffffff" stroke="#4966b4" stroke-width="2"/>
+<text x="577.5" y="575.0" font-size="21" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">GeneralConditioner</text>
+<text x="577.5" y="602.0" font-size="21" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">IdentityEmbedder(cond_image)</text>
+<rect x="760" y="540" width="190" height="82" rx="18" ry="18" fill="#ffffff" stroke="#4966b4" stroke-width="2"/>
+<text x="855.0" y="575.0" font-size="23" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">EDMSigma2St</text>
+<text x="855.0" y="604.0" font-size="23" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">alpha = 3.0</text>
+<rect x="985" y="540" width="180" height="82" rx="18" ry="18" fill="#ffffff" stroke="#4966b4" stroke-width="2"/>
+<text x="1075.0" y="575.0" font-size="21" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">ResidualDenoiser</text>
+<text x="1075.0" y="602.0" font-size="21" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">ResidualEDMScaling</text>
+<rect x="450" y="675" width="245" height="82" rx="18" ry="18" fill="#ffffff" stroke="#4966b4" stroke-width="2"/>
+<text x="572.5" y="697.5" font-size="19" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">CloudRemoval</text>
+<text x="572.5" y="722.5" font-size="19" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">Wrapper</text>
+<text x="572.5" y="747.5" font-size="19" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">concat(x_t, cond_image)</text>
+<rect x="715" y="650" width="450" height="122" rx="18" ry="18" fill="#f6f9ff" stroke="#3f67c8" stroke-width="2"/>
+<text x="940.0" y="692.0" font-size="20" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">SemanticRoutedPatchDenoiser</text>
+<text x="940.0" y="718.0" font-size="20" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">6通道输入</text>
+<text x="940.0" y="744.0" font-size="20" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">patch=128, mode=max, threshold=0.005</text>
+<rect x="430" y="820" width="360" height="102" rx="18" ry="18" fill="#fff4ee" stroke="#c76434" stroke-width="2"/>
+<text x="610.0" y="852.0" font-size="20" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#451c0c" font-weight="600">SemanticFeatureMatching</text>
+<text x="610.0" y="878.0" font-size="20" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#451c0c" font-weight="600">ResidualDiffusionLoss</text>
+<text x="610.0" y="904.0" font-size="20" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#451c0c" font-weight="600">像素重建损失 + 语义特征匹配损失</text>
+<rect x="810" y="820" width="355" height="102" rx="18" ry="18" fill="#fff4ee" stroke="#c76434" stroke-width="2"/>
+<text x="987.5" y="852.5" font-size="19" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#451c0c" font-weight="600">MaskWeightedAsymmetric</text>
+<text x="987.5" y="877.5" font-size="19" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#451c0c" font-weight="600">FeatureMatchingLoss</text>
+<text x="987.5" y="902.5" font-size="19" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#451c0c" font-weight="600">VGG relu2_2 / relu3_3 / relu4_3</text>
+<rect x="585" y="950" width="330" height="78" rx="18" ry="18" fill="#fff8ef" stroke="#ba6b2d" stroke-width="2"/>
+<text x="750.0" y="997.0" font-size="22" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#49270b" font-weight="600">总损失 = cloud-aware pixel loss + 0.10 × feature matching</text>
+<polyline points="342,560 395,560 395,582 450,582" fill="none" stroke="#2f7a68" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="342,650 395,650 395,452 760,452" fill="none" stroke="#2f7a68" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="342,560 395,560 395,452 995,452" fill="none" stroke="#2f7a68" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="342,740 395,740 395,866 450,866" fill="none" stroke="#2f7a68" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="342,830 395,830 395,882 450,882" fill="none" stroke="#2f7a68" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="705,582 985,582" fill="none" stroke="#4966b4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="950,582 950,582 950,582" fill="none" stroke="#4966b4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1080,494 1080,540" fill="none" stroke="#4966b4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="705,452 760,452" fill="none" stroke="#4966b4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="705,452 995,452" fill="none" stroke="#4966b4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1075,622 1075,660" fill="none" stroke="#4966b4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="572,622 572,675" fill="none" stroke="#4966b4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="695,716 735,716" fill="none" stroke="#4966b4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1165,716 1165,866 795,866" fill="none" stroke="#4966b4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="950,772 950,866 840,866" fill="none" stroke="#4966b4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="795,958 795,989 585,989" fill="none" stroke="#c76434" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="840,866 840,989 915,989" fill="none" stroke="#c76434" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="405" y="1085" width="800" height="270" rx="28" ry="28" fill="#f6fbf8" stroke="#4f7d61" stroke-width="3"/>
+<text x="431" y="1127" font-size="30" text-anchor="start" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#4f7d61" font-weight="700">采样 / 验证 / 预测</text>
+<rect x="450" y="1145" width="245" height="82" rx="18" ry="18" fill="#ffffff" stroke="#4f7d61" stroke-width="2"/>
+<text x="572.5" y="1180.0" font-size="23" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">ResidualHeunEDMSampler</text>
+<text x="572.5" y="1209.0" font-size="23" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">8步反向扩散</text>
+<rect x="735" y="1145" width="220" height="82" rx="18" ry="18" fill="#ffffff" stroke="#4f7d61" stroke-width="2"/>
+<text x="845.0" y="1180.0" font-size="24" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">重复调用</text>
+<text x="845.0" y="1210.0" font-size="24" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">ResidualDenoiser</text>
+<rect x="990" y="1145" width="175" height="82" rx="18" ry="18" fill="#ffffff" stroke="#4f7d61" stroke-width="2"/>
+<text x="1077.5" y="1180.0" font-size="24" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">解码输出</text>
+<text x="1077.5" y="1210.0" font-size="24" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">restored image</text>
+<rect x="735" y="1260" width="430" height="60" rx="18" ry="18" fill="#f8fffd" stroke="#6da286" stroke-width="2"/>
+<text x="950.0" y="1296.5" font-size="19" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">采样时继续传入 semantic_mask / semantic_mask_available / M, 保持与训练一致的路由行为</text>
+<polyline points="572,1028 572,1186 450,1186" fill="none" stroke="#4f7d61" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="10 8"/>
+<polyline points="695,1186 735,1186" fill="none" stroke="#4f7d61" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="955,1186 985,1186 985,716 1165,716" fill="none" stroke="#4f7d61" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="10 8"/>
+<polyline points="1165,1186 1195,1186" fill="none" stroke="#4f7d61" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="88" y="900" width="255" height="98" rx="18" ry="18" fill="#fcfffe" stroke="#69a08e" stroke-width="2"/>
+<text x="215.5" y="943.0" font-size="21" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#16332c" font-weight="600">数据集同时提供:</text>
+<text x="215.5" y="970.0" font-size="21" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#16332c" font-weight="600">条件图、目标图、云掩码、语义掩码</text>
+<rect x="88" y="1015" width="255" height="120" rx="18" ry="18" fill="#fcfffe" stroke="#69a08e" stroke-width="2"/>
+<text x="215.5" y="1056.0" font-size="20" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#16332c" font-weight="600">cond_image 有双重角色:</text>
+<text x="215.5" y="1082.0" font-size="20" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#16332c" font-weight="600">1. 作为 mean_key 的 μ</text>
+<text x="215.5" y="1108.0" font-size="20" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#16332c" font-weight="600">2. 作为 concat 条件输入</text>
+<rect x="1370" y="230" width="750" height="74" rx="18" ry="18" fill="#f3e6d8" stroke="#a6682e" stroke-width="2"/>
+<text x="1745.0" y="276.0" font-size="24" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#43230b" font-weight="600">输入: x_t(3通道) 与 cond_image(3通道) 拼接后形成 6通道特征</text>
+<rect x="1390" y="350" width="230" height="82" rx="18" ry="18" fill="#eef9f0" stroke="#3d8b4b" stroke-width="2"/>
+<text x="1505.0" y="400.0" font-size="24" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">semantic_mask</text>
+<rect x="1660" y="350" width="230" height="82" rx="18" ry="18" fill="#eef9f0" stroke="#3d8b4b" stroke-width="2"/>
+<text x="1775.0" y="400.0" font-size="24" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">cloud mask M</text>
+<rect x="1525" y="470" width="230" height="92" rx="18" ry="18" fill="#f4fbf5" stroke="#5d9a69" stroke-width="2"/>
+<text x="1640.0" y="510.0" font-size="23" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">组合路由掩码</text>
+<text x="1640.0" y="539.0" font-size="23" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">combine_mode = union</text>
+<rect x="1525" y="615" width="230" height="92" rx="18" ry="18" fill="#eef6ff" stroke="#3f78d1" stroke-width="2"/>
+<text x="1640.0" y="655.0" font-size="22" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">Pad 到 128 的整数倍</text>
+<text x="1640.0" y="683.0" font-size="22" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">Patchify 为 128×128 块</text>
+<rect x="1525" y="760" width="230" height="104" rx="18" ry="18" fill="#eef6ff" stroke="#3f78d1" stroke-width="2"/>
+<text x="1640.0" y="792.0" font-size="22" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">计算 patch route score</text>
+<text x="1640.0" y="820.0" font-size="22" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">route_mode = max</text>
+<text x="1640.0" y="848.0" font-size="22" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">score &gt; 0.005 进入重分支</text>
+<rect x="1390" y="915" width="260" height="140" rx="18" ry="18" fill="#fff3eb" stroke="#c66a2b" stroke-width="2"/>
+<text x="1520.0" y="952.0" font-size="21" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#32190a" font-weight="600">轻分支</text>
+<text x="1520.0" y="979.0" font-size="21" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#32190a" font-weight="600">LightweightBackground</text>
+<text x="1520.0" y="1006.0" font-size="21" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#32190a" font-weight="600">Denoiser</text>
+<text x="1520.0" y="1033.0" font-size="21" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#32190a" font-weight="600">2层卷积, hidden=32</text>
+<rect x="1720" y="900" width="340" height="170" rx="18" ry="18" fill="#fff3eb" stroke="#c66a2b" stroke-width="2"/>
+<text x="1890.0" y="941.5" font-size="19" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#32190a" font-weight="600">重分支 Backbone</text>
+<text x="1890.0" y="966.5" font-size="19" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#32190a" font-weight="600">ImageTransformerDenoiser</text>
+<text x="1890.0" y="991.5" font-size="19" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#32190a" font-weight="600">ModelInterface</text>
+<text x="1890.0" y="1016.5" font-size="19" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#32190a" font-weight="600">宽度: 64 / 128 / 256 / 512</text>
+<text x="1890.0" y="1041.5" font-size="19" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#32190a" font-weight="600">注意力: 邻域, 邻域, 全局, 全局</text>
+<rect x="1510" y="1135" width="280" height="86" rx="18" ry="18" fill="#f8fafc" stroke="#5b6c7c" stroke-width="2"/>
+<text x="1650.0" y="1186.5" font-size="23" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">用重分支结果覆盖被路由的 patch</text>
+<rect x="1510" y="1270" width="280" height="76" rx="18" ry="18" fill="#f8fafc" stroke="#5b6c7c" stroke-width="2"/>
+<text x="1650.0" y="1316.5" font-size="23" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#102020" font-weight="600">Unpatchify + 去除 padding</text>
+<rect x="1840" y="1265" width="250" height="86" rx="18" ry="18" fill="#f7f1fb" stroke="#8a5cb8" stroke-width="2"/>
+<text x="1965.0" y="1316.5" font-size="23" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#241230" font-weight="600">输出: 最终预测残差 / 去噪结果</text>
+<polyline points="1505,304 1505,350" fill="none" stroke="#a6682e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1780,304 1780,350" fill="none" stroke="#a6682e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1505,432 1505,470 1640,470" fill="none" stroke="#3d8b4b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1775,432 1775,470 1640,470" fill="none" stroke="#3d8b4b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1640,562 1640,615" fill="none" stroke="#3f78d1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1640,707 1640,760" fill="none" stroke="#3f78d1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1640,864 1640,995 1650,995" fill="none" stroke="#3f78d1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1640,864 1640,995 1740,995" fill="none" stroke="#3f78d1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1650,995 1650,1178 1510,1178" fill="none" stroke="#c66a2b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1900,1070 1900,1178 1790,1178" fill="none" stroke="#c66a2b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1650,1221 1650,1270" fill="none" stroke="#5b6c7c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1790,1308 1840,1308" fill="none" stroke="#5b6c7c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="1410" y="1395" font-size="20" text-anchor="start" font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#5a6470" font-weight="500">图中所有模块关系均来自当前仓库实现，而非概念性推断。</text>
+</svg>
