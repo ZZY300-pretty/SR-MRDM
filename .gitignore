@@ -50,3 +50,6 @@ __pycache__/
 # IDE / temp
 # =========================
 .vscode/
+
+# Training logs
+*.log
